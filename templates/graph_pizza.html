@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gráfico de Pizza</title>
+</head>
+<body>
+    <h1>Gráfico de Pizza</h1>
+    <form method="POST" action="/graphpizza">
+        <label for="quantidade">Quantidade:</label>
+        <input type="number" id="quantidade" name="quantidade" min="1" max="10">
+        <br>
+        {% if quantidade %}
+            {% for i in range(quantidade) %}
+                <input type="number" name="valor{{i+1}}" placeholder="Valor {{i+1}}">
+                <br>
+            {% endfor %}
+            <input type="submit" value="Gerar Gráfico">
+        {% endif %}
+    </form>
+</body>
+</html>
