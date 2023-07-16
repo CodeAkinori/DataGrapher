@@ -1,12 +1,13 @@
 from flask import Flask, render_template, redirect, url_for, request
 import matplotlib.pyplot as plt
+import numpy as np
 import os
 
 app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return render_template('home.html')
+    return render_template('index.html')
 
 @app.route('/create_chart', methods=['GET', 'POST'])
 def create_chart():
