@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Criar Gráfico de Pizza</title>
+</head>
+<body>
+    <h1>Criar Gráfico de Pizza</h1>
+    <form action="{{ url_for('create_chart') }}" method="POST">
+        <label for="numbers">Insira os números separados por vírgula:</label><br>
+        <input type="text" id="numbers" name="numbers" required><br><br>
+        <button type="submit">Criar Gráfico</button>
+    </form>
+</body>
+</html>

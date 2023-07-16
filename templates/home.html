@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Página Inicial</title>
+</head>
+<body>
+    <h1>Bem-vindo à Página Inicial</h1>
+    <p>Aqui você pode criar um gráfico de pizza.</p>
+    
+    <form action="{{ url_for('create_chart') }}" method="POST">
+        <button type="submit">Criar Gráfico de Pizza</button>
+    </form>
+</body>
+</html>
