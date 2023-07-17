@@ -35,5 +35,6 @@ def create_chart():
 def chart():
     return render_template('chart.html')
 
+
 if __name__ == '__main__':
     app.run()
