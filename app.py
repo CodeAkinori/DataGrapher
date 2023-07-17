@@ -21,7 +21,7 @@ def create_chart():
             plt.title('Pie Chart')
             
             # Salvar o gráfico em um arquivo, para exibição
-            chart_path = os.path.join('static', 'pie_chart.png')
+            chart_path = os.path.join('static', 'img', 'pie_chart.png')
             plt.savefig(chart_path)
             plt.close()
             
