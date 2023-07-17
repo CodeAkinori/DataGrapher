@@ -1,6 +1,5 @@
 from flask import Flask, render_template, redirect, url_for, request
 import matplotlib.pyplot as plt
-import numpy as np
 import os
 
 app = Flask(__name__)
@@ -21,7 +20,7 @@ def create_chart():
             plt.axis('equal')
             plt.title('Gráfico de Pizza')
             
-            # Salvar o gráfico em um arquivo
+            # Salvar o gráfico em um arquivo, para exibição
             chart_path = os.path.join('static', 'pie_chart.png')
             plt.savefig(chart_path)
             plt.close()
