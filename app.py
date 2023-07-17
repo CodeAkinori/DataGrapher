@@ -18,7 +18,7 @@ def create_chart():
             # Gerar o gráfico de pizza
             plt.pie(numbers, labels=numbers, autopct='%1.1f%%')
             plt.axis('equal')
-            plt.title('Gráfico de Pizza')
+            plt.title('Pie Chart')
             
             # Salvar o gráfico em um arquivo, para exibição
             chart_path = os.path.join('static', 'pie_chart.png')
