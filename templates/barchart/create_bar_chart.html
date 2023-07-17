@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Página Inicial</title>
+    <title>Create Bar Chart</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -16,14 +16,15 @@
             margin-bottom: 20px;
         }
 
-        p {
+        label {
             color: #666666;
             font-size: 18px;
-            margin-bottom: 40px;
         }
 
-        form {
-            display: inline-block;
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #cccccc;
         }
 
         button[type="submit"] {
@@ -37,14 +38,13 @@
     </style>
 </head>
 <body>
-    <h1>DataGrapher</h1>
-    <p>Plot Charts With Python!</p>
-    
-    <form action="{{ url_for('create_chart') }}" method="POST">
-        <button type="submit">Create Pie Chart</button>
-    </form>
+    <h1>Create Bar Chart</h1>
     <form action="{{ url_for('create_bar_chart') }}" method="POST">
-        <button type="submit">Create Bar Chart</button>
+        <label for="numbers">Enter numbers (separated by comma):</label>
+        <br>
+        <input type="text" name="numbers" id="numbers" required>
+        <br><br>
+        <button type="submit">Generate Bar Chart</button>
     </form>
 </body>
 </html>
